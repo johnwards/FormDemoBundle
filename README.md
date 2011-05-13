@@ -27,6 +27,7 @@ Add this to your your routing.yml
               resource: "@AcmeFormDemoBundle/Resources/config/routing.yml"
 
 Routes:
+
           /account/register
           /account
           /researcher

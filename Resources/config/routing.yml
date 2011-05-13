@@ -1,0 +1,3 @@
+_default:
+    resource: "@AcmeFormDemoBundle/Controller/DemoController.php"
+    type:     annotation

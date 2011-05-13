@@ -1,0 +1,31 @@
+{% extends 'AcmeDemoBundle::layout.html.twig' %}
+
+{% block content %}
+    <h1>Register Account</h1>
+
+    <form action="{{ path('researcher') }}" method="POST" novalidate="novalidate">
+        
+        
+        <fieldset>
+            <legend>Your Details</legend>
+            <div class="form-row">
+                {{ form_label(form.firstName) }}
+                {{ form_errors(form.firstName) }}
+                {{ form_widget(form.firstName) }}
+            </div>
+            <div class="form-row">
+                {{ form_label(form.lastName) }}
+                {{ form_errors(form.lastName) }}
+                {{ form_widget(form.lastName) }}
+            </div>
+            <div class="form-row">
+                {{ form_label(form.email) }}
+                {{ form_errors(form.email) }}
+                {{ form_widget(form.email) }}
+            </div>
+        </fieldset>
+
+        {{ form_rest(form) }}
+        <input type="submit" value="Save" />
+    </form>
+{% endblock %}

@@ -1,6 +1,10 @@
 Symfony Form Demo Bundle
 ========================
 
+Add this bundle to your project as Git submodules:
+
+          $ git submodule add git://github.com/johnwards/FormDemoBundle.git vendor/bundles/Acme/FormDemoBundle
+
 Add the Acme namespace to your autoloader:
 
           // app/autoload.php

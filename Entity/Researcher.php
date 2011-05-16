@@ -18,4 +18,9 @@ class Researcher
      * @assert:NotBlank()
      */
     public $email;
+
+    /**
+     * @assert:Choice(choices = {"male", "female"}, message = "Choose a valid gender.")
+     */
+    public $gender;
 }

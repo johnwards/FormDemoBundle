@@ -23,6 +23,11 @@
                 {{ form_errors(form.email) }}
                 {{ form_widget(form.email) }}
             </div>
+            <div class="form-row">
+                {{ form_label(form.gender) }}
+                {{ form_errors(form.gender) }}
+                {{ form_widget(form.gender) }}
+            </div>
         </fieldset>
 
         {{ form_rest(form) }}

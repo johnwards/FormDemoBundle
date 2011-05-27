@@ -8,12 +8,16 @@ use Acme\FormDemoBundle\Form\AccountRegisterType;
 use Acme\FormDemoBundle\Form\AccountType;
 use Acme\FormDemoBundle\Form\ResearcherType;
 
+
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+    
 class DemoController extends Controller
 {
 
     /**
-     * @extra:Route("/account/register", name="account_register")
-     * @extra:Template()
+     * @Route("/account/register", name="account_register")
+     * @Template()
      */
     public function registerAction()
     {
@@ -32,8 +36,8 @@ class DemoController extends Controller
 
 
     /**
-     * @extra:Route("/account", name="account")
-     * @extra:Template()
+     * @Route("/account", name="account")
+     * @Template()
      */
     public function accountAction()
     {
@@ -51,8 +55,8 @@ class DemoController extends Controller
     }
 
     /**
-     * @extra:Route("/researcher", name="researcher")
-     * @extra:Template()
+     * @Route("/researcher", name="researcher")
+     * @Template()
      */
     public function researcherAction()
     {
@@ -70,7 +74,7 @@ class DemoController extends Controller
     }
 
     /**
-     * @extra:Route("/account/register/done", name="account_register_done")
+     * @Route("/account/register/done", name="account_register_done")
      * @Template()
      */
     public function registerDoneAction()

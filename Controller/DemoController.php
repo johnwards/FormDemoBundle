@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 use Acme\FormDemoBundle\Form\AccountRegisterType;
 use Acme\FormDemoBundle\Form\AccountType;
 use Acme\FormDemoBundle\Form\ResearcherType;
+use Acme\FormDemoBundle\Form\AccountResearcherType;
 
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -34,6 +35,25 @@ class DemoController extends Controller
         return array('form' => $form->createView());
     }
 
+
+    /**
+     * @Route("/account/researcher", name="account_researcher")
+     * @Template()
+     */
+    public function accountResearcherAction()
+    {
+        $formFactory = $this->get('form.factory');
+        $form = $formFactory->create(new AccountResearcherType());
+
+        if ('POST' == $this->get('request')->getMethod()) {
+            $form->bindRequest($this->get('request'));
+            if ($form->isValid()) {
+                return new RedirectResponse($this->generateUrl('account_register_done'));
+            }
+        }
+
+        return array('form' => $form->createView());
+    }
 
     /**
      * @Route("/account", name="account")

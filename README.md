@@ -15,7 +15,7 @@ Add the Acme namespace to your autoloader:
 
 Add this bundle to your application's kernel:
 
-          // application/ApplicationKernel.php
+          // app/AppKernel.php
           public function registerBundles()
           {
               return array(
